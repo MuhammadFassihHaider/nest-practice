@@ -7,6 +7,7 @@ import { CowsModule } from './cows/cows.module';
 import { CowsService } from './cows/cows.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CatsModule } from './cats/cats.module';
+import { TodosModule } from './todos/todos.module';
 const uri =
   'mongodb+srv://fassih123:fassih123@devconnector.bcnhw.mongodb.net/devConnector';
 
@@ -34,6 +35,7 @@ const connect = async () => {
     connect(),
     CowsModule,
     CatsModule,
+    TodosModule,
   ],
   controllers: [AppController, CowsController],
   providers: [AppService, CowsService],
